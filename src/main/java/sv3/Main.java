@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import sv3.screens.MenuScreen;
 
 public class Main extends Application {
-	
+
 	@Override
 	public void start(final Stage stage) {
 		try {
@@ -29,7 +29,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	static void launch0(String[] args) {
 		launch(args);
 	}
