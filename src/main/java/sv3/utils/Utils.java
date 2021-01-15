@@ -29,13 +29,15 @@ public final class Utils {
 			return true;
 		} catch (NumberFormatException nfe) {
 			try {
-				return Double.parseDouble(s) % 1 == 0;
+				double d = Double.parseDouble(s);
+				return Math.rint(d) == d;
 			} catch (NumberFormatException nfe1) {
 				return false;
 			}
 		}
 	}
 
+	// Wait (in the called thread) for all queued Runnables to complete
 	public static void waitForRunLater() throws InterruptedException {
 		Semaphore semaphore = new Semaphore(0);
 		Platform.runLater(semaphore::release);
@@ -64,7 +66,7 @@ public final class Utils {
 
 	private static final Color NICE_GREEN = Color.valueOf("#55FF00");
 
-	public static final Color DEFAULT_COLOUR = Color.WHITESMOKE; //(default colour)
+	public static final Color DEFAULT_COLOUR = Color.WHITESMOKE;
 	public static final Color HIGHLIGHT = Color.RED;
 	public static final Color DONE = NICE_GREEN;
 
@@ -94,7 +96,6 @@ public final class Utils {
 	}
 
 	// Duplicates aren't allowed so I have to use this workaround :(
-	// I thought this only works when {p1 < p2} but it works when {p1 > p2} as well :D
 	public static void swap(List<Node> list, int p1, int p2, boolean deselectP1, boolean deselectP2) {
 		if (p1 == p2)
 			return;
@@ -114,11 +115,11 @@ public final class Utils {
 
 	}
 
-	/**
-	 * The same as {@link #swap(List, int, int) swap} but it doesn't highlight
-	 * the rectangles
-	 */
+	// Doesn't highlight rectangles
 	private static <T> void swap0(List<T> list, int p1, int p2) {
+		if (p1 == p2)
+			return;
+
 		//list.add(p2, list.set(p2 < p1 ? p1-1 : p1, list.remove(p2)) );
 
 		T uno;
@@ -184,7 +185,6 @@ public final class Utils {
 			Thread.currentThread().interrupt();
 		}
 	}
-
 
 	public static <T extends Labeled> void bindText(T label, NumberExpression prop) {
 		label.textProperty().bind(prop.asString());
