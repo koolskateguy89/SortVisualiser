@@ -4,8 +4,9 @@ import java.net.URL;
 
 import javafx.scene.media.AudioClip;
 
-//TODO: once this is ready, make methods private
-public class SoundFactory {
+//TODO: once this is ready: make methods private & class public
+@SuppressWarnings("unused")
+class SoundFactory {
 
 	private SoundFactory() { }
 
@@ -13,6 +14,7 @@ public class SoundFactory {
 
 	private static final AudioClip OOOO;
 
+	// not called atm
 	static {
 		URL pingURL = SoundFactory.class.getClassLoader().getResource("sounds/ping.mp3");
 		PING = new AudioClip(pingURL.toString());
