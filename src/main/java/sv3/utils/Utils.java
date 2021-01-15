@@ -68,6 +68,7 @@ public final class Utils {
 	public static final Color HIGHLIGHT = Color.RED;
 	public static final Color DONE = NICE_GREEN;
 	
+	// maybe lock it with synchronized ??????
 	public static volatile Color deselect = DEFAULT_COLOUR;
 	
 	
