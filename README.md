@@ -24,7 +24,7 @@ This is an application that displays the sorting of a list of rectangles accordi
 - Insertion Sort
 - Selection Sort
 
-* simulating sorting a list of doubles
+\* simulating sorting a list of doubles
 
 <sub><sup>
 Currently sitting on 1567 lines & 1257 loc
