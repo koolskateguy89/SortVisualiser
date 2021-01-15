@@ -25,7 +25,7 @@ This is an application that visually shows the sorting of a list, using the foll
 - Selection Sort
 
 <sub><sup>
-Currently sitting on 1567 lines
+Currently sitting on 1567 lines & 1257 loc
 </sup></sub>
 
 ## Known Problems
