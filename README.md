@@ -35,9 +35,9 @@ Currently sitting on 1567 lines & 1257 loc
 1. Merge Sort does not happen
 
 2. Quick Sort is broken:
-    1. It usually won't sort random lists fully - they'll be almost sorted but not quite
+    1. It usually won't sort random lists fully - the list will be almost sorted but not quite
 
-    2. Quick Sort on a long in reverse order list will be **EXTREMELY** slow
+    2. Quick Sort on a long _in reverse order_ list will be **EXTREMELY** slow
 
 3. Stop button does not function properly
 
