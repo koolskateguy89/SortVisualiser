@@ -25,6 +25,22 @@ git clone https://github.com/koolskateguy89/SortVisualiser.git
 
 (p.s. if using Eclipse, you can import this as a Java Project, but you will probably have to configure the project build path to include all the prerequisites)
 
+### Running
+
+You can run using this using [Maven](https://maven.apache.org), by running this command:
+```
+mvn package
+```
+inside the repository folder
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Problems
+
+1. Merge Sort does not happen
+2. Quick Sort is broken:
+    1. It usually won't sort random lists fully - they'll be almost sorted but not quite
+    2. Quick Sort on a long in reverse order list will be EXTREMELY slow
+3. Stop button does not function properly
