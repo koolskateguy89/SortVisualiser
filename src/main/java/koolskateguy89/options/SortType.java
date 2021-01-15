@@ -1,15 +1,15 @@
-package dara.options;
+package koolskateguy89.options;
 
 import java.util.List;
 import java.util.function.Function;
 
 import javafx.scene.Node;
 
-import dara.sorts.BubbleSort;
-import dara.sorts.InsertionSort;
-import dara.sorts.QuickSort;
-import dara.sorts.SelectionSort;
-import dara.sorts.Sort;
+import koolskateguy89.sorts.BubbleSort;
+import koolskateguy89.sorts.InsertionSort;
+import koolskateguy89.sorts.QuickSort;
+import koolskateguy89.sorts.SelectionSort;
+import koolskateguy89.sorts.Sort;
 
 // might rename this 'Sorts'
 public enum SortType {

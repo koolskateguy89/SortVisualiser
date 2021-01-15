@@ -1,7 +1,7 @@
-package dara.sorts;
+package koolskateguy89.sorts;
 
-import static dara.utils.Utils.sleep;
-import static dara.utils.Utils.swap;
+import static koolskateguy89.utils.Utils.sleep;
+import static koolskateguy89.utils.Utils.swap;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import javafx.beans.property.SimpleLongProperty;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 
-import dara.utils.Runnables;
-import dara.utils.Utils;
+import koolskateguy89.utils.Runnables;
+import koolskateguy89.utils.Utils;
 
 public class SelectionSort extends AbstractSort {
 	

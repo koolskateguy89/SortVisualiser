@@ -3,10 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- TODO: update and configure this -->
-    <!-- TODO: rename package to sv3 or something idk -->
     <!-- TODO: test running this with Maven-->
 
-    <groupId>er</groupId>
+    <groupId>koolskateguy89</groupId>
     <artifactId>sort-visualiser-v3</artifactId>
     <packaging>jar</packaging>
     <version>1.0</version>

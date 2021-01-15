@@ -1,6 +1,6 @@
-package dara.screens;
+package koolskateguy89.screens;
 
-import static dara.utils.Utils.sleep;
+import static koolskateguy89.utils.Utils.sleep;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,11 +20,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-import dara.options.Order;
-import dara.options.SortType;
-import dara.options.TimerUnit;
-import dara.sorts.Sort;
-import dara.utils.Utils;
+import koolskateguy89.options.Order;
+import koolskateguy89.options.SortType;
+import koolskateguy89.options.TimerUnit;
+import koolskateguy89.sorts.Sort;
+import koolskateguy89.utils.Utils;
 
 //933 max width
 public class SortScreen extends AnchorPane {

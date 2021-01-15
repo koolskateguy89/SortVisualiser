@@ -1,4 +1,4 @@
-package dara.sorts;
+package koolskateguy89.sorts;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Labeled;
 import javafx.scene.shape.Rectangle;
 
-import dara.utils.Utils;
+import koolskateguy89.utils.Utils;
 
 abstract class AbstractSort implements Sort {
 	

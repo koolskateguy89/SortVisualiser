@@ -1,7 +1,7 @@
-package dara.sorts;
+package koolskateguy89.sorts;
 
-import static dara.utils.Utils.insert;
-import static dara.utils.Utils.sleep;
+import static koolskateguy89.utils.Utils.insert;
+import static koolskateguy89.utils.Utils.sleep;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
 
-import dara.utils.Runnables;
-import dara.utils.Utils;
+import koolskateguy89.utils.Runnables;
+import koolskateguy89.utils.Utils;
 
 public class InsertionSort extends AbstractSort {
 
