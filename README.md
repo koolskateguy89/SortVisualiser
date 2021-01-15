@@ -11,6 +11,8 @@
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
     - [Building](#building-using-maven)
+    - [Running](#running)
+        - [Eclipse](#eclipse)
 - [License](#license)
 
 ## Introduction
@@ -54,11 +56,22 @@ git clone https://github.com/koolskateguy89/SortVisualiser.git
 
 ### Building using Maven
 
-You can run using this using [Maven](https://maven.apache.org), by running this command:
+You can build this application using [Maven](https://maven.apache.org). Inside the repository folder, run the command:
 ```
 mvn package
 ```
-inside the repository folder
+
+### Running
+
+If you use Eclipse, see [Eclipse below](#eclipse)
+
+Normal
+
+#### Eclipse
+
+You can import this repository into Eclipse as a Java Project.
+
+Though to run it, you'll likely have to configure the project build path to ensure it has the required [dependencies](#prerequisites)
 
 ## License
 
