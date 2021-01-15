@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="587.0" styleClass="pane" stylesheets="@application.css" type="AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane fx:id="variablesGrid" alignment="CENTER" layoutX="14.0" layoutY="12.0" prefWidth="226.0" AnchorPane.leftAnchor="14.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="115.20001983642578" minWidth="10.0" prefWidth="104.79999542236328" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="36.000006103515624" minHeight="25.0" prefHeight="25.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="55.19998779296875" minHeight="25.0" prefHeight="25.0" vgrow="NEVER" />
+            <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="NEVER" />
+            <RowConstraints minHeight="25.0" prefHeight="30.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <Text fill="WHITE" nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text=":Array length" wrappingWidth="98.936767578125">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Label fx:id="length" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" text="0" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text=":Array accesses" wrappingWidth="98.936767578125" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Label fx:id="access" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text=":Array changes" wrappingWidth="98.936767578125" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Label fx:id="change" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" text="0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Text fill="WHITE" nodeOrientation="RIGHT_TO_LEFT" strokeType="OUTSIDE" strokeWidth="0.0" text=":Time taken" GridPane.rowIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Label fx:id="time" alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="0 ms" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Text fill="WHITE" layoutX="346.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sort Type:" wrappingWidth="67.7366943359375" AnchorPane.rightAnchor="173.2633056640625">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="type" fill="WHITE" layoutX="428.0" layoutY="29.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="..." wrappingWidth="129.33673095703125" AnchorPane.rightAnchor="29.66326904296875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <HBox fx:id="box" alignment="BOTTOM_CENTER" layoutX="12.0" layoutY="129.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="299.0" prefWidth="563.0" AnchorPane.bottomAnchor="10.0">
+         <children>
+         	<!-- This will be cleared anyway, the Rectangle is just to test stuff in SceneBuilder -->
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" stroke="BLACK" strokeType="INSIDE" width="162.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+         </children>
+      </HBox>
+   </children>
+</fx:root>

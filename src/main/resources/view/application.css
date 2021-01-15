@@ -1,0 +1,22 @@
+.root {
+	-fx-font-size: 15;
+}
+
+.pane {
+	-fx-background-color: #2B2B2B;
+}
+
+.button {
+	-fx-background-color: #44B2A5;
+	-fx-text-fill: #FFFFFF;
+}
+
+.highlight {
+	-fx-background-color: #FF00FF;
+	-fx-text-fill: #2B2B2B;
+}
+
+.reset {
+	-fx-background-color: #FF0000;
+	-fx-text-fill: #FFFFFF;
+}

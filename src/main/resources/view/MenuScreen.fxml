@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1181.0" styleClass="pane" stylesheets="@application.css" type="Pane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="anchorPane" layoutX="8.0" layoutY="14.0" prefHeight="599.0" prefWidth="933.0" />
+      <Pane fx:id="menuPane" layoutX="994.0" layoutY="4.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="664.0" prefWidth="175.0">
+         <children>
+            <VBox fx:id="sorts" prefHeight="156.0" prefWidth="175.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="49.0" text="Sorts:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                <Button fx:id="bubble" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#bubble" text="Bubble" />
+                  <Button fx:id="insertion" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#insertion" text="Insertion" />
+                  <Button fx:id="quick" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#quick" text="Quick" />
+                  <Button fx:id="selection" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#selection" text="Selection" />
+               </children>
+            </VBox>
+            <VBox layoutY="225.0" prefHeight="183.0" prefWidth="175.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" minWidth="50.0" text="List order:" textFill="WHITE" />
+                  <Button fx:id="inOrder" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#inOrder" text="In order" />
+                  <Button fx:id="random" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#random" text="Random" />
+                  <Button fx:id="reverse" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reverse" text="Reverse" />
+                  <Button fx:id="reset" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reset" styleClass="reset" text="Reset" />
+               </children>
+            </VBox>
+            <Label layoutX="10.0" layoutY="427.0" prefHeight="18.0" prefWidth="73.0" text="Time unit:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <GridPane alignment="TOP_RIGHT" layoutX="-4.0" layoutY="458.0" prefHeight="56.0" prefWidth="183.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="120.00003662109376" minWidth="10.0" prefWidth="120.00003662109376" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="227.20001220703125" minWidth="10.0" prefWidth="122.39996337890625" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="RIGHT" text="Seconds" textFill="WHITE">
+                     <graphic>
+                        <CheckBox fx:id="seconds" mnemonicParsing="false" onAction="#seconds" textFill="WHITE" />
+                     </graphic>
+                  </Label>
+                  <Label contentDisplay="RIGHT" text="Micros" textFill="WHITE" GridPane.columnIndex="1">
+                     <graphic>
+                        <CheckBox fx:id="micros" mnemonicParsing="false" onAction="#micros" textFill="WHITE" />
+                     </graphic>
+                  </Label>
+                  <Label contentDisplay="RIGHT" text="Millis" textFill="WHITE" GridPane.rowIndex="1">
+                     <graphic>
+                        <CheckBox fx:id="millis" mnemonicParsing="false" onAction="#millis" textFill="WHITE" />
+                     </graphic>
+                  </Label>
+                  <Label contentDisplay="RIGHT" text="Nanos" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <CheckBox fx:id="nanos" mnemonicParsing="false" onAction="#nanos" textFill="WHITE" />
+                     </graphic>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label layoutX="22.0" layoutY="534.0" text="Length:" textFill="WHITE" />
+            <TextField fx:id="length" editable="false" focusTraversable="false" layoutX="82.0" layoutY="533.0" mouseTransparent="true" prefHeight="25.0" prefWidth="57.0" text="10" />
+            <Button fx:id="startBtn" layoutY="583.0" mnemonicParsing="false" onAction="#start" prefHeight="50.0" prefWidth="175.0" text="Start" />
+         </children>
+      </Pane>
+      <Slider fx:id="slider" layoutX="29.0" layoutY="624.0" majorTickUnit="30.0" max="400.0" min="10.0" minorTickCount="2" prefHeight="50.0" prefWidth="897.0" showTickLabels="true" showTickMarks="true" value="10.0" />
+   </children>
+</fx:root>
