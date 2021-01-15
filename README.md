@@ -2,6 +2,18 @@
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7f1307d0b35e4fa48c793b57a9c4217d)](https://www.codacy.com/gh/koolskateguy89/SortVisualiser/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=koolskateguy89/SortVisualiser&amp;utm_campaign=Badge_Grade)
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Known Problems](#known-problems)
+- [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installing](#installing)
+    - [Running](#running)
+- [License](#license)
+
+## Introduction
+
 This is an application that visually shows the sorting of a list, using the following sorts:
 - Bubble Sort
 - Quick Sort (needs to be fixed)
