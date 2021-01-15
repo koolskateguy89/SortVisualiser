@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>koolskateguy89</groupId>
-    <artifactId>sort-visualiser-v3</artifactId>
+    <artifactId>sort-visualiser</artifactId>
     <packaging>jar</packaging>
     <version>3.0</version>
     <name>Sort Visualiser V3</name>
