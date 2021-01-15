@@ -1,4 +1,4 @@
-package koolskateguy89.screens;
+package sv3.screens;
 
 import java.io.IOException;
 
@@ -17,10 +17,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-import koolskateguy89.options.Order;
-import koolskateguy89.options.SortType;
-import koolskateguy89.options.TimerUnit;
-import koolskateguy89.utils.Utils;
+import sv3.options.Order;
+import sv3.options.SortType;
+import sv3.options.TimerUnit;
+import sv3.utils.Utils;
 
 public class MenuScreen extends Pane {
 	

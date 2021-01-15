@@ -1,4 +1,4 @@
-package koolskateguy89.sorts;
+package sv3.sorts;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Labeled;
 import javafx.scene.shape.Rectangle;
 
-import koolskateguy89.utils.Utils;
+import sv3.utils.Utils;
 
 abstract class AbstractSort implements Sort {
 	

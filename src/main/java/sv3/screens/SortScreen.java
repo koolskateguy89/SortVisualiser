@@ -1,6 +1,6 @@
-package koolskateguy89.screens;
+package sv3.screens;
 
-import static koolskateguy89.utils.Utils.sleep;
+import static sv3.utils.Utils.sleep;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,11 +20,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-import koolskateguy89.options.Order;
-import koolskateguy89.options.SortType;
-import koolskateguy89.options.TimerUnit;
-import koolskateguy89.sorts.Sort;
-import koolskateguy89.utils.Utils;
+import sv3.options.Order;
+import sv3.options.SortType;
+import sv3.options.TimerUnit;
+import sv3.sorts.Sort;
+import sv3.utils.Utils;
 
 //933 max width
 public class SortScreen extends AnchorPane {

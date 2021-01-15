@@ -1,4 +1,4 @@
-package koolskateguy89.utils;
+package sv3.utils;
 
 /*
  * Static utility class for Runnable's

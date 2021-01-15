@@ -2,9 +2,6 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- TODO: update and configure this -->
-    <!-- TODO: test running this with Maven-->
-
     <groupId>koolskateguy89</groupId>
     <artifactId>sort-visualiser-v3</artifactId>
     <packaging>jar</packaging>
@@ -29,6 +26,7 @@
             <artifactId>javafx-fxml</artifactId>
             <version>15.0.1</version>
         </dependency>
+        
     </dependencies>
 
     <build>
@@ -63,7 +61,7 @@
 
             				<transformers>
             					<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-            						<mainClass>dara.SortLauncher</mainClass>
+            						<mainClass>sv3.SortLauncher</mainClass>
             					</transformer>
             				</transformers>
 

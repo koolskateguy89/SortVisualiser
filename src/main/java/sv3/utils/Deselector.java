@@ -1,6 +1,6 @@
-package koolskateguy89.utils;
+package sv3.utils;
 
-import static koolskateguy89.utils.Utils.sleep;
+import static sv3.utils.Utils.sleep;
 
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;

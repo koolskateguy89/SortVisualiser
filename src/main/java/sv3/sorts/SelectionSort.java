@@ -1,7 +1,7 @@
-package koolskateguy89.sorts;
+package sv3.sorts;
 
-import static koolskateguy89.utils.Utils.sleep;
-import static koolskateguy89.utils.Utils.swap;
+import static sv3.utils.Utils.sleep;
+import static sv3.utils.Utils.swap;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import javafx.beans.property.SimpleLongProperty;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 
-import koolskateguy89.utils.Runnables;
-import koolskateguy89.utils.Utils;
+import sv3.utils.Runnables;
+import sv3.utils.Utils;
 
 public class SelectionSort extends AbstractSort {
 	

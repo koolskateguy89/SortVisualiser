@@ -1,4 +1,4 @@
-package koolskateguy89.options;
+package sv3.options;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 
 import javafx.scene.Node;
 
-import koolskateguy89.utils.Utils;
+import sv3.utils.Utils;
 
 public enum Order {
 	// do nothing

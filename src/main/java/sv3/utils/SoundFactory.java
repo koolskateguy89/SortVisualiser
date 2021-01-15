@@ -1,4 +1,4 @@
-package koolskateguy89.utils;
+package sv3.utils;
 
 import java.net.URL;
 

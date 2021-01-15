@@ -1,15 +1,15 @@
-package koolskateguy89.options;
+package sv3.options;
 
 import java.util.List;
 import java.util.function.Function;
 
 import javafx.scene.Node;
 
-import koolskateguy89.sorts.BubbleSort;
-import koolskateguy89.sorts.InsertionSort;
-import koolskateguy89.sorts.QuickSort;
-import koolskateguy89.sorts.SelectionSort;
-import koolskateguy89.sorts.Sort;
+import sv3.sorts.BubbleSort;
+import sv3.sorts.InsertionSort;
+import sv3.sorts.QuickSort;
+import sv3.sorts.SelectionSort;
+import sv3.sorts.Sort;
 
 // might rename this 'Sorts'
 public enum SortType {
