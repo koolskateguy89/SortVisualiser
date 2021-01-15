@@ -165,25 +165,15 @@ public class SortScreen extends AnchorPane {
     	
     	double width = this.getPrefWidth() / size;
     	
-    	//if (width < 2) {
-    		//width = 2;
-    	//}
-    	
     	list.clear();
     	for (int i = 1; i <= size; i++) {
     		double height = i * (box.getHeight() / size);
     		
     		Rectangle rect = new Rectangle(width, height, Utils.DEFAULT_COLOUR);
     		list.add(rect);
-    		/*
-    		Text t = new Text(Integer.toString(i));
-    		t.setFill(Color.WHITE);
     		
-    		VBox vbox = new VBox(t, rect);
-    		vbox.setAlignment(Pos.BOTTOM_CENTER);
-    		
-    		list.add(vbox);
-    		*/
+    		// TODO: implement some sort of visual way to see the actual position of each
+    		//       rectangle
     	}
     	order.enforce(list);
     }
