@@ -13,6 +13,14 @@ class Deselector {
 	
 	private static Queue<Rectangle> q = new LinkedBlockingQueue<>();
 	
+	/*
+	 * FIXME: configure thread sleep time to work for all sort, not just either QuickSort or
+	 *        the other 
+	 *        
+	 *        (when delay is more than about 25 seconds, QuickSort deselecting does not work properly,
+	 *        but when delay is less than about 20 seconds, QuickSort deselecting works somewhat, but
+	 *        the deselecting for all other sorts won't work at all - it'll be too quick)
+	 */
 	static {
 		Thread thread = new Thread(() -> {
 			while (true) {

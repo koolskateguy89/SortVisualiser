@@ -71,6 +71,8 @@ public final class Utils {
 	// maybe lock it with synchronized ??????
 	public static volatile Color deselect = DEFAULT_COLOUR;
 	
+	// FIXME: Fix colour selecting & deselecting, especially time delay (see Deselector)
+	
 	
 	public static void reset(Node node) {
 		Deselector.queue(getRect(node));
