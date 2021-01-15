@@ -6,7 +6,7 @@
     <artifactId>sort-visualiser</artifactId>
     <packaging>jar</packaging>
     <version>3.0</version>
-    <name>Sort Visualiser V3</name>
+    <name>Sort-Visualiser-V3</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -40,7 +40,7 @@
     </dependencies>
 
     <build>
-		<finalName> ${project.artifactId} </finalName>
+		<finalName> ${project.name} </finalName>
 
         <plugins>
         	<!-- Enable preview features (atm Pattern Matching) to be able to compile -->

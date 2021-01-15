@@ -65,7 +65,8 @@ mvn package
 
 If you use Eclipse, see [Eclipse below](#eclipse)
 
-Normal
+1. Once Maven has finished building, navigate to the `target` folder
+2. Run the following command `java -jar --enable-preview "Sort-Visualiser-V3.jar"`
 
 #### Eclipse
 
