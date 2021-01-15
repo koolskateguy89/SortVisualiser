@@ -10,8 +10,6 @@ import sv3.screens.MenuScreen;
 // TODO: test running this with Maven
 public class Main extends Application {
 	
-	//private static Main instance;
-
 	@Override
 	public void start(final Stage stage) {
 		try {
