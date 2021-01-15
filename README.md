@@ -42,7 +42,7 @@ Currently sitting on 1567 lines
 
 ### Prerequisites
 
--  [Java 14](https://www.oracle.com/uk/java/technologies/javase-downloads.html) (with preview features)
+-  [Java 14](https://www.oracle.com/uk/java/technologies/javase-downloads.html) (with preview features enabled)
 -  [JavaFX 15](https://openjfx.io/)
 
 ### Installing
