@@ -22,6 +22,10 @@ This is an application that visually shows the sorting of a list, using the foll
 - Insertion Sort
 - Selection Sort
 
+<sub><sup>
+Currently sitting on 1567 lines
+</sup></sub>
+
 ## Known Problems
 
 1. Merge Sort does not happen
