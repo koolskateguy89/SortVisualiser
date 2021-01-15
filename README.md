@@ -10,7 +10,7 @@
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installing](#installing)
-    - [Running](#running)
+    - [Building](#building-using-maven)
 - [License](#license)
 
 ## Introduction
@@ -52,7 +52,7 @@ git clone https://github.com/koolskateguy89/SortVisualiser.git
 
 (p.s. if using Eclipse, you can import this as a Java Project, but you will probably have to configure the project build path to include all the prerequisites)
 
-### Running
+### Building using Maven
 
 You can run using this using [Maven](https://maven.apache.org), by running this command:
 ```
