@@ -12,17 +12,12 @@ public class Main extends Application {
 	
 	//private static Main instance;
 
-	private Stage stage;
-
 	@Override
-	public void start(Stage primaryStage) {
-		//instance = this;
+	public void start(final Stage stage) {
 		try {
-			stage = primaryStage;
 			stage.setTitle("Sort Visualiser V3");
 			stage.setResizable(false);
 			
-			//Menu menu = new Menu();
 			MenuScreen main = new MenuScreen();
 
 			Scene scene = new Scene(main);

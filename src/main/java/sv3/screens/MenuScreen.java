@@ -22,6 +22,7 @@ import sv3.options.SortType;
 import sv3.options.TimerUnit;
 import sv3.utils.Utils;
 
+// This also kinda acts like a MainScreen
 public class MenuScreen extends Pane {
 	
 	public MenuScreen() throws IOException {
