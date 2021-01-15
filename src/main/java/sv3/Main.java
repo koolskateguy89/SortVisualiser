@@ -6,8 +6,6 @@ import javafx.stage.Stage;
 
 import sv3.screens.MenuScreen;
 
-// TODO: update and configure pom
-// TODO: test running this with Maven
 public class Main extends Application {
 	
 	@Override
