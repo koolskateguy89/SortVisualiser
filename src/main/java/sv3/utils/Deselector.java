@@ -8,15 +8,15 @@ import java.util.concurrent.LinkedBlockingQueue;
 import javafx.scene.shape.Rectangle;
 
 class Deselector {
-	
+
 	private Deselector() { }
-	
+
 	private static Queue<Rectangle> q = new LinkedBlockingQueue<>();
-	
+
 	/*
 	 * FIXME: configure thread sleep time to work for all sort, not just either QuickSort or
-	 *        the other 
-	 *        
+	 *        the other
+	 *
 	 *        (when delay is more than about 25 seconds, QuickSort deselecting does not work properly,
 	 *        but when delay is less than about 20 seconds, QuickSort deselecting works somewhat, but
 	 *        the deselecting for all other sorts won't work at all - it'll be too quick)
@@ -37,15 +37,15 @@ class Deselector {
 		thread.setDaemon(true);
 		thread.start();
 	}
-	
+
 	public static void queue(Rectangle r) {
 		q.offer(r);
 	}
-	
+
 	public static void queueAll(Rectangle... rectangles) {
 		for (Rectangle rect : rectangles) {
 			q.offer(rect);
 		}
 	}
-	
+
 }

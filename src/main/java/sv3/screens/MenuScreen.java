@@ -24,7 +24,7 @@ import sv3.utils.Utils;
 
 // This also kinda acts like a MainScreen
 public class MenuScreen extends Pane {
-	
+
 	public MenuScreen() throws IOException {
 		FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("view/MenuScreen.fxml"));
 		loader.setController(this);
@@ -36,32 +36,32 @@ public class MenuScreen extends Pane {
 	@FXML
 	private AnchorPane anchorPane;
 	private SortScreen sortScreen;
-	
+
 	@FXML
 	private Pane menuPane;
-	
+
 	@FXML
 	private void initialize() throws IOException {
 		initSortScreen();
-		
+
 		highlightDefaults();
-		
+
 		reset.disableProperty().bind(sortScreen.hasStartedSortProperty().not());
-		
+
 		// bind the slider's value to the length textfield, as an integer instead of double
 		IntegerProperty i = new SimpleIntegerProperty();
 		// bind bidirectional so slider value is always an integer
 		i.bindBidirectional(slider.valueProperty());
 		length.textProperty().bind(i.asString());
-		
+
 		slider.valueProperty().addListener((obs, oldVal, newVal) -> {
 			sortScreen.setSize(i.get());
 		});
-		
+
 		// start with default max size
 		i.set((int)slider.getMax());
 	}
-	
+
 	private void initSortScreen() throws IOException {
 		sortScreen = new SortScreen();
 
@@ -71,7 +71,7 @@ public class MenuScreen extends Pane {
 
 		sortScreen.setOnSortFinished(() -> Platform.runLater(this::onSortFinish));
 	}
-	
+
 	private void highlightDefaults() {
 		switch (SortType.getDefault()) {
 			case BUBBLE    -> highlight(bubble);
@@ -81,13 +81,13 @@ public class MenuScreen extends Pane {
 			case SELECTION -> highlight(selection);
 			default -> throw new IllegalArgumentException("Not yet implemented sort: " + SortType.getDefault());
 		}
-		
+
 		switch (Order.getDefault()) {
 			case IN_ORDER -> highlight(inOrder);
 			case RANDOM   -> highlight(random);
 			case REVERSE  -> highlight(reverse);
 		}
-		
+
 		switch (TimerUnit.getDefault()) {
 			case SECONDS -> select(seconds);
 			case MICROS  -> select(micros);
@@ -95,13 +95,13 @@ public class MenuScreen extends Pane {
 			case NANOS   -> select(nanos);
 		}
 	}
-	
+
 	// to be called upon stage showing
 	public void setup() {
 		sortScreen.setup();
 	}
 
-	
+
 	@FXML
 	private VBox sorts;
 	@FXML
@@ -138,8 +138,8 @@ public class MenuScreen extends Pane {
 
 	@FXML
 	private Button startBtn;
-	
-	
+
+
 	@FXML
 	void bubble(ActionEvent event) {
 		sortScreen.setSortType(SortType.BUBBLE);
@@ -153,7 +153,7 @@ public class MenuScreen extends Pane {
     	resetSorts();
     	highlight(insertion);
     }
-    
+
     @FXML
     void quick(ActionEvent event) {
     	sortScreen.setSortType(SortType.QUICK);
@@ -167,7 +167,7 @@ public class MenuScreen extends Pane {
     	resetSorts();
     	highlight(selection);
     }
-    
+
     // TODO: implement Merge sort 1
     // TODO: add Merge button to this FXML
     @FXML
@@ -176,15 +176,15 @@ public class MenuScreen extends Pane {
     	resetSorts();
     	//highlight(merge);
     }
-    
-    
+
+
     @FXML
     void inOrder(ActionEvent event) {
     	sortScreen.enforceOrder(Order.IN_ORDER);
     	resetOrders();
     	highlight(inOrder);
     }
-    
+
     @FXML
     void random(ActionEvent event) {
     	sortScreen.enforceOrder(Order.RANDOM);
@@ -198,25 +198,25 @@ public class MenuScreen extends Pane {
     	resetOrders();
     	highlight(reverse);
     }
-    
+
     @FXML
     void reset(ActionEvent event) {
     	sortScreen.reset();
     }
-    
+
 
     /*
      * It doesn't really make much sense to select then deselect then reselect,
      * but this is the most concise way I can think of
      */
-    
+
     @FXML
     void seconds(ActionEvent event) {
     	sortScreen.setUnit(TimerUnit.SECONDS);
     	resetUnits();
     	select(seconds);
     }
-    
+
     @FXML
     void micros(ActionEvent event) {
     	sortScreen.setUnit(TimerUnit.MICROS);
@@ -237,29 +237,29 @@ public class MenuScreen extends Pane {
     	resetUnits();
     	select(nanos);
     }
-    
-    
+
+
     private void resetSorts() {
     	reset(sorts);
     }
-    
+
     private void resetOrders() {
     	reset(inOrder, random, reverse);
     }
-    
+
     private void resetUnits() {
     	seconds.setSelected(false);
     	micros.setSelected(false);
     	millis.setSelected(false);
     	nanos.setSelected(false);
     }
-    
+
 	private static void reset(Button... buttons) {
     	for (Button b : buttons) {
     		unhighlight(b);
     	}
     }
-    
+
     private static void reset(Pane p) {
     	p.getChildren().forEach(n -> {
     		if (n instanceof Button) {
@@ -267,23 +267,23 @@ public class MenuScreen extends Pane {
     		}
     	});
     }
-    
+
     private static void highlight(Button button) {
     	button.getStyleClass().add("highlight");
     }
-    
+
     private static void unhighlight(Node node) {
     	var sc = node.getStyleClass();
 		if (sc.size() > 1)
 			sc.remove(1);
     }
-    
+
     private static void select(CheckBox box) {
     	box.setSelected(true);
     }
-    
+
     private volatile boolean started = false;
-    
+
     @FXML
 	void start(ActionEvent event) {
     	if (started) {
@@ -293,37 +293,37 @@ public class MenuScreen extends Pane {
     		started = false;
     		return;
     	}
-    	
+
     	// disable everything but the start button - to allow it to become the stop button
     	menuPane.getChildren().forEach(node -> {
     		if (!isStartButton(node))
     			node.setDisable(true);
     	});
-    	
+
     	startBtn.setText("Stop");
     	startBtn.setStyle("-fx-background-color: #FF0000; -fx-text-fill: #FFFFFF");
-    	
+
     	sortScreen.start();
     	started = true;
 	}
-    
+
     // TODO: learn about how threads handle being interrupted to be able to properly stop
     private void stop() {
     	sortScreen.stop();
     }
-    
+
     @SuppressWarnings("preview")
 	private static boolean isStartButton(Node n) {
     	return n instanceof Button b && b.getText().equals("Start");
     }
-    
+
     private void onSortFinish() {
     	startBtn.setText("Start");
     	startBtn.setStyle(null);
-    	
+
     	menuPane.getChildren().forEach(node -> node.setDisable(false));
     	started = false;
-    	
+
     	Utils.deselect = Utils.DONE;
     }
 }

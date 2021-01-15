@@ -36,7 +36,7 @@
             <artifactId>javafx-media</artifactId>
             <version>15.0.1</version>
         </dependency>
-        
+
     </dependencies>
 
     <build>
@@ -55,7 +55,7 @@
         			</compilerArgs>
         		</configuration>
         	</plugin>
-        
+
         	<!-- Build an executable 'shaded' JAR -->
             <plugin>
             	<groupId>org.apache.maven.plugins</groupId>

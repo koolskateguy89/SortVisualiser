@@ -13,14 +13,14 @@ import sv3.sorts.Sort;
 
 // might rename this 'Sorts'
 public enum SortType {
-	
+
 	BUBBLE    (BubbleSort::new),
 	INSERTION (InsertionSort::new),
 	MERGE     (null),    // TODO: implement in-place merge sort
 	QUICK     (QuickSort::new),
 	SELECTION (SelectionSort::new);
 
-	
+
 	Function<List<Node>, Sort> sorter;
 
 	SortType(Function<List<Node>, Sort> func) {

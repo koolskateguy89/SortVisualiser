@@ -13,15 +13,15 @@ public class Main extends Application {
 		try {
 			stage.setTitle("Sort Visualiser V3");
 			stage.setResizable(false);
-			
+
 			MenuScreen mainScreen = new MenuScreen();
 
 			Scene scene = new Scene(mainScreen);
-			
+
 			stage.setScene(scene);
-			
+
 			stage.setOnShown(event -> mainScreen.setup());
-			
+
 			stage.setScene(scene);
 			stage.centerOnScreen();
 			stage.show();

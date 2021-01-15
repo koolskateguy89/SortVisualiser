@@ -24,20 +24,20 @@ public class InsertionSort extends AbstractSort {
 	public String type() {
 		return "Insertion";
 	}
-	
+
 	private LongProperty access = new SimpleLongProperty();
 	private LongProperty changes = new SimpleLongProperty();
-	
+
 	public void clear() {
 		access.set(0);
 		changes.set(0);
 	}
-	
+
 	// insert next value into the sorted sub-array;
 	// shift right all between insertion index and original index
 	public void sort() {
 		Platform.runLater(this::clear);
-		
+
 		Rectangle done = null;
 		for (int i = 1; i < list.size(); i++) {
 			double height = getHeight(i);
@@ -48,7 +48,7 @@ public class InsertionSort extends AbstractSort {
 				done = getRect(j);
 				double next = done.getHeight();
 				Runnable updater = () -> incAccess(1);
-				
+
 				// Insert value at correct position in sub-array
 				boolean exit = height < next;
 				if (exit) {
@@ -59,30 +59,30 @@ public class InsertionSort extends AbstractSort {
 						insert(list, from, at, true, true);
 					});
 				}
-				
+
 				Platform.runLater(updater);
-				
+
 				if (exit) {
 					sleep(15);
 					waitForRunLater();
 					break;
 				}
 			}
-			
+
 			getRect(i).setFill(Utils.DONE);
 			if (done != null && done.getHeight() < height)
 				done.setFill(Utils.DEFAULT_COLOUR);
 		}
 	}
-	
+
 	private void incAccess(int inc) {
 		access.set(access.get() + inc);
 	}
-	
+
 	public void bindAccess(Label accessText) {
 		bindText(accessText, access);
 	}
-	
+
 	private void incChanges(int inc) {
 		changes.set(changes.get() + inc);
 	}
@@ -90,5 +90,5 @@ public class InsertionSort extends AbstractSort {
 	public void bindChange(Label changeText) {
 		bindText(changeText, changes);
 	}
-	
+
 }
