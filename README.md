@@ -1,6 +1,7 @@
 # SortVisualiser
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/7f1307d0b35e4fa48c793b57a9c4217d)](https://www.codacy.com/gh/koolskateguy89/SortVisualiser/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=koolskateguy89/SortVisualiser&amp;utm_campaign=Badge_Grade)
+[![GitHub](https://img.shields.io/github/license/koolskateguy89/SortVisualiser)](LICENSE)
 
 ## Table of Contents
 
