@@ -17,12 +17,14 @@
 
 ## Introduction
 
-This is an application that visually shows the sorting of a list, using the following sorts:
+This is an application that displays the sorting of a list of rectangles according to their heights*, using the following sorts:
 - Bubble Sort
 - Quick Sort (needs to be fixed)
 - Merge Sort (will be added soon)
 - Insertion Sort
 - Selection Sort
+
+* simulating sorting a list of doubles
 
 <sub><sup>
 Currently sitting on 1567 lines & 1257 loc
