@@ -1,5 +1,14 @@
 # SortVisualiser
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/7f1307d0b35e4fa48c793b57a9c4217d)](https://www.codacy.com/gh/koolskateguy89/SortVisualiser/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=koolskateguy89/SortVisualiser&amp;utm_campaign=Badge_Grade)
+
+This is an application that visually shows the sorting of a list, using the following sorts:
+- Bubble Sort
+- Quick Sort (needs to be fixed)
+- Merge Sort (will be added soon)
+- Insertion Sort
+- Selection Sort
+
 ## Getting Started
 
 ### Prerequisites
