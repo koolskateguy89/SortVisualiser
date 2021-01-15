@@ -36,6 +36,7 @@ Currently sitting on 1567 lines & 1257 loc
 
 2. Quick Sort is broken:
     1. It usually won't sort random lists fully - they'll be almost sorted but not quite
+
     2. Quick Sort on a long in reverse order list will be **EXTREMELY** slow
 
 3. Stop button does not function properly
