@@ -11,7 +11,7 @@ import sv3.sorts.QuickSort;
 import sv3.sorts.SelectionSort;
 import sv3.sorts.Sort;
 
-// might rename this 'Sorts'
+// This also acts as a SortFactory
 public enum SortType {
 
 	BUBBLE    (BubbleSort::new),
