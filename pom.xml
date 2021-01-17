@@ -6,13 +6,23 @@
     <artifactId>sort-visualiser</artifactId>
     <packaging>jar</packaging>
     <version>3.0</version>
+
     <name>Sort-Visualiser-V3</name>
+    <url>https://github.com/koolskateguy89/SortVisualiser</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
     </properties>
+
+    <licences>
+        <license>
+            <name>Apache Licence v2.0</name>
+            <url>http://www.apache.org/licences/LICENCE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licences>
 
     <dependencies>
     	<!-- JavaFX -->
