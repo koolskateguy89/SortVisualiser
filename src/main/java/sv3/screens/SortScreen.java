@@ -100,7 +100,7 @@ public class SortScreen extends AnchorPane {
 
 	public void setUnit(TimerUnit unit) {
 		time.textProperty().unbind();
-		time.textProperty().bind(timer.divide(unit.divisor()).asString().concat(' ' + unit.toString()));
+		time.textProperty().bind(timer.divide(unit.divisor).asString().concat(' ' + unit.symbol));
 	}
 
 	/*
