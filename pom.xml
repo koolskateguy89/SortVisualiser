@@ -16,13 +16,13 @@
         <maven.compiler.target>14</maven.compiler.target>
     </properties>
 
-    <licences>
+    <licenses>
         <license>
             <name>Apache Licence v2.0</name>
-            <url>http://www.apache.org/licences/LICENCE-2.0.txt</url>
+            <url>https://www.apache.org/licences/LICENCE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
-    </licences>
+    </licenses>
 
     <dependencies>
     	<!-- JavaFX -->
@@ -53,20 +53,6 @@
 		<finalName> ${project.name} </finalName>
 
         <plugins>
-            <!--
-        	<plugin>
-        		<groupId>org.apache.maven.plugins</groupId>
-        		<artifactId>maven-compiler-plugin</artifactId>
-        		<version>3.8.1</version>
-        		<configuration>
-        			<release>15</release>
-        			<compilerArgs>
-        				<arg>-enable-preview</arg>
-        			</compilerArgs>
-        		</configuration>
-        	</plugin>
-            -->
-
         	<!-- Build an executable 'shaded' JAR -->
             <plugin>
             	<groupId>org.apache.maven.plugins</groupId>
