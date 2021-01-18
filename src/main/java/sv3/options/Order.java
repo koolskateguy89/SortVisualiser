@@ -18,7 +18,7 @@ public enum Order {
 	RANDOM  (Utils::shuffle);
 
 
-	Consumer<List<Node>> orderer;
+	private final Consumer<List<Node>> orderer;
 
 	Order(Consumer<List<Node>> cons) {
 		orderer = cons;
@@ -34,7 +34,7 @@ public enum Order {
 			orderer.accept(list);
 	}
 
-
+	
 	private static final Comparator<Node> RECT_COMP = (a,b) -> {
 		double h1 = Utils.getRect(a).getHeight();
 		double h2 = Utils.getRect(b).getHeight();

@@ -7,20 +7,20 @@ import javafx.scene.control.Label;
 
 public interface Sort {
 
-	public void setOriginalList(List<Node> list);
+	void setOriginalList(List<Node> list);
 
-	public String type();
+	String type();
 
-	public void sort();
+	void sort();
 
-	public void bindAccess(Label accessText);
+	void bindAccess(Label accessText);
 
-	public void bindChange(Label changeText);
+	void bindChange(Label changeText);
 
-	public void reset();
+	void reset();
 
-	public void clear();
+	void clear();
 
-	public void destroy();
+	void destroy();
 
 }

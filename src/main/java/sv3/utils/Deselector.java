@@ -11,7 +11,7 @@ class Deselector {
 
 	private Deselector() { }
 
-	private static Queue<Rectangle> q = new LinkedBlockingQueue<>();
+	private static final Queue<Rectangle> q = new LinkedBlockingQueue<>();
 
 	/*
 	 * FIXME: configure thread sleep time to work for all sort, not just either QuickSort or

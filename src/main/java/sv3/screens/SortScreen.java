@@ -51,7 +51,7 @@ public class SortScreen extends AnchorPane {
     // timed in nanoseconds, display mode set by user
     @FXML
     private Label time;
-    private DoubleProperty timer = new SimpleDoubleProperty();
+    private final DoubleProperty timer = new SimpleDoubleProperty();
 
     @FXML
     private Text type;
@@ -111,7 +111,7 @@ public class SortScreen extends AnchorPane {
 	 * 				- sort type change
 	 * 				- Order change
 	 */
-	private BooleanProperty hasStartedSort = new SimpleBooleanProperty(false);
+	private final BooleanProperty hasStartedSort = new SimpleBooleanProperty(false);
 
 	public boolean hasStartedSort() {
 		return hasStartedSortProperty().get();

@@ -15,11 +15,11 @@ public enum TimerUnit {
 		return MILLIS;
 	}
 
-	private String symbol;
+	private final String symbol;
 	// nanos / divisor = this unit
-	private long divisor;
+	private final long divisor;
 
-	private TimerUnit(String s, long d) {
+	TimerUnit(String s, long d) {
 		symbol = s;
 		divisor = d;
 	}

@@ -25,8 +25,8 @@ public class InsertionSort extends AbstractSort {
 		return "Insertion";
 	}
 
-	private LongProperty access = new SimpleLongProperty();
-	private LongProperty changes = new SimpleLongProperty();
+	private final LongProperty access = new SimpleLongProperty();
+	private final LongProperty changes = new SimpleLongProperty();
 
 	public void clear() {
 		access.set(0);

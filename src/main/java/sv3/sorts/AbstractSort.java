@@ -53,17 +53,17 @@ abstract class AbstractSort implements Sort {
 		}
 	}
 
-	private static List<Labeled> bound = new ArrayList<>();
+	private static final List<Labeled> BOUND = new ArrayList<>();
 
 	private static <T extends Labeled> void addBinding(T bounded) {
-		bound.add(bounded);
+		BOUND.add(bounded);
 	}
 
 	@Override
 	public void destroy() {
 		clear();
-		bound.forEach(l -> l.textProperty().unbind());
-		bound.clear();
+		BOUND.forEach(l -> l.textProperty().unbind());
+		BOUND.clear();
 		list = null;
 		copy = null;
 	}

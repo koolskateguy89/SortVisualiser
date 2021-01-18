@@ -80,10 +80,6 @@ public final class Utils {
 		Deselector.queue(getRect(node));
 	}
 
-	public static void reset(List<Node> list, int i) {
-		reset(list.get(i));
-	}
-
 	private static void select(Rectangle... rects) {
 		for (Rectangle r : rects) {
 			r.setFill(HIGHLIGHT);

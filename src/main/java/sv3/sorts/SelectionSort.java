@@ -24,8 +24,8 @@ public class SelectionSort extends AbstractSort {
 		return "Selection";
 	}
 
-	private LongProperty access = new SimpleLongProperty();
-	private LongProperty changes = new SimpleLongProperty();
+	private final LongProperty access = new SimpleLongProperty();
+	private final LongProperty changes = new SimpleLongProperty();
 
 	public void clear() {
 		access.set(0);

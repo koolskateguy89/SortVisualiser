@@ -21,7 +21,7 @@ public enum SortType {
 	SELECTION (SelectionSort::new);
 
 
-	Function<List<Node>, Sort> sorter;
+	private final Function<List<Node>, Sort> sorter;
 
 	SortType(Function<List<Node>, Sort> func) {
 		sorter = func;
