@@ -26,7 +26,7 @@ This is an application that displays the sorting of a list of rectangles accordi
 \* simulating sorting a list of doubles
 
 <sub><sup>
-Currently sitting on 1567 lines & 1190 loc
+Currently sitting on 1562 lines & 1190 loc
 </sup></sub>
 
 ## Known Problems
