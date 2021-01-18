@@ -53,7 +53,7 @@
 		<finalName> ${project.name} </finalName>
 
         <plugins>
-        	<!-- Enable preview features (atm Pattern Matching) to be able to compile -->
+            <!--
         	<plugin>
         		<groupId>org.apache.maven.plugins</groupId>
         		<artifactId>maven-compiler-plugin</artifactId>
@@ -61,10 +61,11 @@
         		<configuration>
         			<release>15</release>
         			<compilerArgs>
-        				<arg>--enable-preview</arg>
+        				<arg>-enable-preview</arg>
         			</compilerArgs>
         		</configuration>
         	</plugin>
+            -->
 
         	<!-- Build an executable 'shaded' JAR -->
             <plugin>

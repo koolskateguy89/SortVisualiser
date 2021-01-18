@@ -54,9 +54,9 @@ public class MenuScreen extends Pane {
 		i.bindBidirectional(slider.valueProperty());
 		length.textProperty().bind(i.asString());
 
-		slider.valueProperty().addListener((obs, oldVal, newVal) -> {
-			sortScreen.setSize(i.get());
-		});
+		slider.valueProperty().addListener((obs, oldVal, newVal) ->
+				sortScreen.setSize(i.get())
+		);
 
 		// start with default max size
 		i.set((int)slider.getMax());
@@ -91,7 +91,7 @@ public class MenuScreen extends Pane {
 		switch (TimerUnit.getDefault()) {
 			case SECONDS -> select(seconds);
 			case MICROS  -> select(micros);
-			case MILLIS  -> select(micros);
+			case MILLIS  -> select(millis);
 			case NANOS   -> select(nanos);
 		}
 	}
@@ -314,7 +314,10 @@ public class MenuScreen extends Pane {
 
     @SuppressWarnings("preview")
 	private static boolean isStartButton(Node n) {
-    	return n instanceof Button b && b.getText().equals("Start");
+    	if (n instanceof Button) {
+    		return ((Button)n).getText().equals("Start");
+		}
+    	return false;
     }
 
     private void onSortFinish() {
