@@ -12,7 +12,6 @@
     - [Installing](#installing)
     - [Building](#building-using-maven)
     - [Running](#running)
-        - [Eclipse](#eclipse)
 - [License](#license)
 
 ## Introduction
@@ -45,7 +44,7 @@ Currently sitting on 1567 lines & 1190 loc
 
 ### Prerequisites
 
--  [Java 14](https://www.oracle.com/uk/java/technologies/javase-downloads.html) (with preview features enabled)
+-  [Java 14](https://www.oracle.com/uk/java/technologies/javase-downloads.html)
 -  [JavaFX 15](https://openjfx.io/)
 
 ### Installing
@@ -54,8 +53,6 @@ Clone this repository:
 ```
 git clone https://github.com/koolskateguy89/SortVisualiser.git
 ```
-
-(p.s. if using Eclipse, you can import this as a Java Project, but you will probably have to configure the project build path to include all the prerequisites)
 
 ### Building using Maven
 
@@ -66,16 +63,8 @@ mvn package
 
 ### Running
 
-If you use Eclipse, see [Eclipse below](#eclipse)
-
 1. Once Maven has finished building, navigate to the `target` folder
-2. Run the command `java -jar --enable-preview "Sort-Visualiser-V3.jar"`
-
-#### Eclipse
-
-You can import this repository into Eclipse as a Java Project.
-
-Though to run it, you'll likely have to configure the project build path to ensure it has the required [dependencies](#prerequisites)
+2. Run the command `java -jar "Sort-Visualiser-V3.jar"`
 
 ## License
 
