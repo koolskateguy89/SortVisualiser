@@ -1,6 +1,6 @@
 package sv3;
 
-public class SortLauncher {
+class SortLauncher {
 
 	public static void main(String[] args) {
 		Main.launch0(args);
