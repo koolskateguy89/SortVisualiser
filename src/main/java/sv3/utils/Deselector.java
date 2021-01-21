@@ -13,7 +13,7 @@ public class Deselector {
 
 	private static final Queue<Rectangle> q = new LinkedBlockingQueue<>();
 
-	public static final int QUICK_DELAY = 8;
+	public static final int QUICK_DELAY = 11;
 	public static final int NORMAL_DELAY = 26;
 	// TODO: implement setting delay from SortScreen
 	public static volatile int delay = NORMAL_DELAY;
