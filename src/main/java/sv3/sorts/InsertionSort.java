@@ -59,6 +59,7 @@ public class InsertionSort extends AbstractSort {
 					final int at = j;
 					updater = Runnables.andThen(updater, () -> {
 						incChanges(from - at + 1); // shifts + insertion
+						// FIXME: this isn't deselecting - it selects but doesn't deselect
 						insert(list, from, at, true, true);
 					});
 				}

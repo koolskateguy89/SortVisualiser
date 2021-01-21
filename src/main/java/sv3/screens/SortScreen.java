@@ -25,6 +25,7 @@ import sv3.options.SortType;
 import sv3.options.TimerUnit;
 import sv3.sorts.Sort;
 import sv3.utils.Utils;
+import sv3.utils.Deselector;
 
 //933 max width
 public class SortScreen extends AnchorPane {
@@ -78,6 +79,12 @@ public class SortScreen extends AnchorPane {
 	public void setSortType(SortType sortType) {
 	   if (sort != null)
 		   sort.destroy();
+
+        if (sortType == SortType.QUICK) {
+            Deselector.delay = Deselector.QUICK_DELAY;
+        } else {
+            Deselector.delay = Deselector.NORMAL_DELAY;
+        }
 
 	   sort = sortType.get(list);
 	   sort.bindAccess(access);
@@ -183,6 +190,7 @@ public class SortScreen extends AnchorPane {
     private Thread timerThread;
 
     public void start() {
+        reset();
     	stop = false;
     	sort.setOriginalList(list);
 

@@ -7,11 +7,16 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 import javafx.scene.shape.Rectangle;
 
-class Deselector {
+public class Deselector {
 
 	private Deselector() { }
 
 	private static final Queue<Rectangle> q = new LinkedBlockingQueue<>();
+
+	public static final int QUICK_DELAY = 8;
+	public static final int NORMAL_DELAY = 26;
+	// TODO: implement setting delay from SortScreen
+	public static volatile int delay = NORMAL_DELAY;
 
 	/*
 	 * FIXME: configure thread sleep time to work for all sort, not just either QuickSort or
@@ -30,7 +35,7 @@ class Deselector {
 				if (!q.isEmpty()) {
 					q.poll().setFill(Utils.deselect);
 				}
-				sleep(20);
+				sleep(delay);
 			}
 		});
 		thread.setName("Deselector thread");
