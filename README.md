@@ -66,7 +66,7 @@ mvn package
 ### Running
 
 1. Once Maven has finished building, navigate to the `target` folder
-2. Run the command `java -jar "Sort-Visualiser-V3.jar"`
+2. Run the command `java -jar "Sort-Visualiser.jar"`
 
 ## License
 
