@@ -21,6 +21,7 @@ public class BubbleSort extends AbstractSort {
 		super(list);
 	}
 
+	@Override
 	public String type() {
 		return "Bubble";
 	}
@@ -28,6 +29,7 @@ public class BubbleSort extends AbstractSort {
 	private final LongProperty access = new SimpleLongProperty();
 	private final LongProperty changes = new SimpleLongProperty();
 
+	@Override
 	public void clear() {
 		access.set(0);
 		changes.set(0);
@@ -38,6 +40,7 @@ public class BubbleSort extends AbstractSort {
 	 * Maximum of unsorted 'sub-array' gets moved to the end of it(/start of sorted 'sub-array')
 	 * on each pass
 	 */
+	@Override
 	public void sort() {
 		Platform.runLater(this::clear);
 
@@ -79,6 +82,7 @@ public class BubbleSort extends AbstractSort {
 		access.set(access.get() + inc);
 	}
 
+	@Override
 	public void bindAccess(Label accessText) {
 		bindText(accessText, access);
 	}
@@ -87,6 +91,7 @@ public class BubbleSort extends AbstractSort {
 		changes.set(changes.get() + inc);
 	}
 
+	@Override
 	public void bindChange(Label changeText) {
 		bindText(changeText, changes);
 	}

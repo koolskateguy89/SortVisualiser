@@ -21,6 +21,7 @@ public class InsertionSort extends AbstractSort {
 		super(list);
 	}
 
+	@Override
 	public String type() {
 		return "Insertion";
 	}
@@ -28,6 +29,7 @@ public class InsertionSort extends AbstractSort {
 	private final LongProperty access = new SimpleLongProperty();
 	private final LongProperty changes = new SimpleLongProperty();
 
+	@Override
 	public void clear() {
 		access.set(0);
 		changes.set(0);
@@ -35,6 +37,7 @@ public class InsertionSort extends AbstractSort {
 
 	// insert next value into the sorted sub-array;
 	// shift right all between insertion index and original index
+	@Override
 	public void sort() {
 		Platform.runLater(this::clear);
 
@@ -79,6 +82,7 @@ public class InsertionSort extends AbstractSort {
 		access.set(access.get() + inc);
 	}
 
+	@Override
 	public void bindAccess(Label accessText) {
 		bindText(accessText, access);
 	}
@@ -87,6 +91,7 @@ public class InsertionSort extends AbstractSort {
 		changes.set(changes.get() + inc);
 	}
 
+	@Override
 	public void bindChange(Label changeText) {
 		bindText(changeText, changes);
 	}

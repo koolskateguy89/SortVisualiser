@@ -21,6 +21,7 @@ public class QuickSort extends AbstractSort {
 		super(list);
 	}
 
+	@Override
 	public String type() {
 		return "Quick";
 	}
@@ -28,11 +29,13 @@ public class QuickSort extends AbstractSort {
 	private final LongProperty access = new SimpleLongProperty();
 	private final LongProperty changes = new SimpleLongProperty();
 
+	@Override
 	public void clear() {
 		access.set(0);
 		changes.set(0);
 	}
 
+	@Override
 	public void sort() {
 		quicksort(0, list.size()-1);
 	}
@@ -58,9 +61,10 @@ public class QuickSort extends AbstractSort {
 
 		Platform.runLater(() -> incAccess(1));
 
+		// traverse from start to end, trying to find proper pivot index
 		int newPivotIndex = start;
 		for (int i = start; i < end; i++) {
-			waitForRunLater();
+			//waitForRunLater();
 
 			double height = getHeight(i);
 			Runnable updater = () -> incAccess(1);
@@ -100,6 +104,7 @@ public class QuickSort extends AbstractSort {
 		access.set(access.get() + inc);
 	}
 
+	@Override
 	public void bindAccess(Label accessText) {
 		bindText(accessText, access);
 	}
@@ -108,6 +113,7 @@ public class QuickSort extends AbstractSort {
 		changes.set(changes.get() + inc);
 	}
 
+	@Override
 	public void bindChange(Label changeText) {
 		bindText(changeText, changes);
 	}

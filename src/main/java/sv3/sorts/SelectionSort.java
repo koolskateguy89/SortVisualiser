@@ -20,6 +20,7 @@ public class SelectionSort extends AbstractSort {
 		super(list);
 	}
 
+	@Override
 	public String type() {
 		return "Selection";
 	}
@@ -27,6 +28,7 @@ public class SelectionSort extends AbstractSort {
 	private final LongProperty access = new SimpleLongProperty();
 	private final LongProperty changes = new SimpleLongProperty();
 
+	@Override
 	public void clear() {
 		access.set(0);
 		changes.set(0);
@@ -36,6 +38,7 @@ public class SelectionSort extends AbstractSort {
 	 * Find the minimum in the unsorted sub-array and move it to the end of
 	 * the sorted sub-array
 	 */
+	@Override
 	public void sort() {
 		Platform.runLater(this::clear);
 
@@ -85,6 +88,7 @@ public class SelectionSort extends AbstractSort {
 		access.set(access.get() + inc);
 	}
 
+	@Override
 	public void bindAccess(Label accessText) {
 		bindText(accessText, access);
 	}
@@ -93,6 +97,7 @@ public class SelectionSort extends AbstractSort {
 		changes.set(changes.get() + inc);
 	}
 
+	@Override
 	public void bindChange(Label changeText) {
 		bindText(changeText, changes);
 	}
