@@ -62,34 +62,37 @@ public class QuickSort extends AbstractSort {
 		Platform.runLater(() -> incAccess(1));
 
 		// traverse from start to end, trying to find proper pivot index
-		int newPivotIndex = start;
+		// also let everything smaller than the pivot be on its left and larger on right
+		int newPivotIndex = start;	// index pivot will be swapped with
 		for (int i = start; i < end; i++) {
-			//waitForRunLater();
-
 			double height = getHeight(i);
 			Runnable updater = () -> incAccess(1);
 
+			// tbh not 1000% confident on how this works yet but it does
 			boolean swap = height < pivotHeight;
 			if (swap) {
 				final int swap1 = i;
 				final int swap2 = newPivotIndex;
-				updater = Runnables.andThen(updater, () -> {
-					incChanges(1);
-					swap(list, swap1, swap2, true, true);
-				});
+				if (swap1 != swap2) {
+					updater = Runnables.andThen(updater, () -> {
+						incChanges(1);
+						swap(list, swap1, swap2, true, true);
+					});
+				}
 				newPivotIndex++;
 			}
 
 			Platform.runLater(updater);
 
-			if (swap)
+			if (swap && i != newPivotIndex-1)
 				sleep(15);
 		}
 
 		if (newPivotIndex != end) {
-			waitForRunLater();
+			//waitForRunLater();
 			final int pivotIndex = newPivotIndex;
 			Platform.runLater(() -> {
+				incChanges(1);
 				swap(list, pivotIndex, end, true, false);
 				pivot.setFill(Utils.DONE);
 			});
