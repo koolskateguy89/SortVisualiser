@@ -37,7 +37,7 @@ abstract class AbstractSort implements Sort {
 	}
 
 	protected Rectangle getRect(int i) {
-		return Utils.getRect(list.get(i));
+		return (Rectangle)list.get(i);
 	}
 
 	protected static <T extends Labeled> void bindText(T text, NumberExpression prop) {
