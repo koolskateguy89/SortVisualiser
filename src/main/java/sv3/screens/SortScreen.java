@@ -131,8 +131,9 @@ public class SortScreen extends AnchorPane {
 		if (sort != null)
 			sort.reset();
 
-		timer.set(0);
-		backToDefault();
+		//timer.set(0);
+
+        backToDefault();
 	}
 
     @FXML
