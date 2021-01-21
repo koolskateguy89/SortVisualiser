@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
+        <javafx.version>15.0.1</javafx.version>
     </properties>
 
     <licenses>
@@ -29,28 +30,28 @@
     	<dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
-            <version>15.0.1</version>
+            <version>${javafx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>15.0.1</version>
+            <version>${javafx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>15.0.1</version>
+            <version>${javafx.version}</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>15.0.1</version>
+            <version>${javafx.version}</version>
         </dependency>
 
     </dependencies>
 
     <build>
-		<finalName> ${project.name} </finalName>
+		<finalName> ${project.artifactId} </finalName>
 
         <plugins>
         	<!-- Build an executable 'shaded' JAR -->
