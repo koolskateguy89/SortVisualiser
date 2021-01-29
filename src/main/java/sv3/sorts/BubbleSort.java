@@ -42,8 +42,6 @@ public class BubbleSort extends AbstractSort {
 	 */
 	@Override
 	public void sort() {
-		Platform.runLater(this::clear);
-
 		for (int i = 0; i < list.size() - 1; i++) {
 			int j;
 			for (j = 1; j < list.size() - i; j++) {

@@ -135,10 +135,12 @@ public class SortScreen extends AnchorPane {
 	}
 
 	public void reset() {
-		if (sort != null)
+		/*
+        if (sort != null)
 			sort.reset();
 
-		//timer.set(0);
+		timer.set(0);
+        */
 
         backToDefault();
 	}
@@ -173,7 +175,7 @@ public class SortScreen extends AnchorPane {
 
     	double width = this.getPrefWidth() / size;
 
-    	list.clear();
+        list.clear();
     	for (int i = 1; i <= size; i++) {
     		double height = i * (box.getHeight() / size);
 
@@ -183,16 +185,16 @@ public class SortScreen extends AnchorPane {
     		// TODO: implement some sort of visual way to see the actual position of each
     		//       rectangle
     	}
-    	order.enforce(list);
+        order.enforce(list);
     }
 
     private Thread sortThread;
     private Thread timerThread;
 
     public void start() {
-        reset();
     	stop = false;
     	sort.setOriginalList(list);
+        reset();
 
     	// if sorting again right after sorting
     	if (hasStartedSort.get())
@@ -227,13 +229,13 @@ public class SortScreen extends AnchorPane {
     private void startSort() {
     	sleep(500);
 
-    	hasStartedSort.set(true);
+        hasStartedSort.set(true);
 
     	if (stop)
     		return;
 
     	sorting = true;
-    	sort.sort();
+        sort.sort();
     	sorting = false;
 
     	if (stop)

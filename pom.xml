@@ -54,6 +54,12 @@
 		<finalName> ${project.artifactId} </finalName>
 
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+
         	<!-- Build an executable 'shaded' JAR -->
             <plugin>
             	<groupId>org.apache.maven.plugins</groupId>
@@ -75,6 +81,19 @@
             						<mainClass>sv3.SortLauncher</mainClass>
             					</transformer>
             				</transformers>
+
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/license/**</exclude>
+                                        <exclude>META-INF/*</exclude>
+                                        <exclude>META-INF/maven/**</exclude>
+                                        <exclude>LICENSE</exclude>
+                                        <exclude>NOTICE</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
 
             			</configuration>
             		</execution>

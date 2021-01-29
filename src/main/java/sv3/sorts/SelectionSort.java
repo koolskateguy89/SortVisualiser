@@ -40,8 +40,6 @@ public class SelectionSort extends AbstractSort {
 	 */
 	@Override
 	public void sort() {
-		Platform.runLater(this::clear);
-
 		for (int i = 0; i < list.size() - 1; i++) {
 			double minHeight = getHeight(i);
 			int minPos = i;

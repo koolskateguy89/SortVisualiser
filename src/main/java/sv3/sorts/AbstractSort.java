@@ -30,6 +30,7 @@ abstract class AbstractSort implements Sort {
 	public void reset() {
 		list.clear();
 		list.addAll(copy);
+		clear();
 	}
 
 	protected double getHeight(int i) {
@@ -61,7 +62,7 @@ abstract class AbstractSort implements Sort {
 
 	@Override
 	public void destroy() {
-		clear();
+		//clear();
 		BOUND.forEach(l -> l.textProperty().unbind());
 		BOUND.clear();
 		list = null;

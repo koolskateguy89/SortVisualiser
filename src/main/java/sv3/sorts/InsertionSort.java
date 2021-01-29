@@ -39,8 +39,6 @@ public class InsertionSort extends AbstractSort {
 	// shift right all between insertion index and original index
 	@Override
 	public void sort() {
-		Platform.runLater(this::clear);
-
 		Rectangle done = null;
 		for (int i = 1; i < list.size(); i++) {
 			double height = getHeight(i);
